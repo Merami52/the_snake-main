@@ -1,6 +1,8 @@
 import random
-import pygame
 from typing import Optional
+
+import pygame
+
 from GameObject import GameObject
 from settings import APPLE_COLOR, BORDER_COLOR, GRID_SIZE
 
@@ -8,7 +10,9 @@ from settings import APPLE_COLOR, BORDER_COLOR, GRID_SIZE
 class Apple(GameObject):
     """Класс яблока."""
 
-    def __init__(self, positions: Optional[list[tuple[int, int]]] = None) -> None:
+    def __init__(
+        self, positions: Optional[list[tuple[int, int]]] = None
+    ) -> None:
         positions = positions or []
         super().__init__(self.randomize_position(positions), APPLE_COLOR)
 

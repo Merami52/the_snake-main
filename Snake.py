@@ -1,17 +1,9 @@
 import pygame
+
 from GameObject import GameObject
-from settings import (
-    BORDER_COLOR,
-    BOARD_BACKGROUND_COLOR,
-    GRID_SIZE,
-    LEFT,
-    RIGHT,
-    SCREEN_HEIGHT,
-    SCREEN_WIDTH,
-    UP,
-    DOWN,
-    SNAKE_COLOR
-)
+from settings import (BOARD_BACKGROUND_COLOR, BORDER_COLOR, DOWN, GRID_SIZE,
+                      LEFT, RIGHT, SCREEN_HEIGHT, SCREEN_WIDTH, SNAKE_COLOR,
+                      UP)
 
 
 class Snake(GameObject):
@@ -87,4 +79,5 @@ class Snake(GameObject):
 
     @property
     def positions(self) -> list[tuple[int, int]]:
+        """Возвращает позиции змейки."""
         return self._positions

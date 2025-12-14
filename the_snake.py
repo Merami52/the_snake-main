@@ -1,15 +1,11 @@
 """Главная точка входа для запуска игры."""
 
 import pygame
+
 from Apple import Apple
 from GameObject import GameObject
+from settings import BOARD_BACKGROUND_COLOR, SCREEN_HEIGHT, SCREEN_WIDTH, SPEED
 from Snake import Snake
-from settings import (
-    SCREEN_WIDTH,
-    SCREEN_HEIGHT,
-    SPEED,
-    BOARD_BACKGROUND_COLOR,
-)
 
 pygame.init()
 
@@ -46,9 +42,7 @@ def main() -> None:
             snake._length += 1
             apple.randomize_position(snake.positions)
             highest_score = max(highest_score, snake._length)
-            pygame.display.set_caption(
-                f"Змейка — рекорд {highest_score}"
-            )
+            pygame.display.set_caption(f"Змейка — рекорд {highest_score}")
 
         if snake.collision:
             snake.reset()
