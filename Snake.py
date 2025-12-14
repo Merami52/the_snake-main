@@ -1,9 +1,18 @@
 import pygame
 
 from GameObject import GameObject
-from settings import (BOARD_BACKGROUND_COLOR, BORDER_COLOR, DOWN, GRID_SIZE,
-                      LEFT, RIGHT, SCREEN_HEIGHT, SCREEN_WIDTH, SNAKE_COLOR,
-                      UP)
+from settings import (
+    BOARD_BACKGROUND_COLOR,
+    BORDER_COLOR,
+    DOWN,
+    GRID_SIZE,
+    LEFT,
+    RIGHT,
+    SCREEN_HEIGHT,
+    SCREEN_WIDTH,
+    SNAKE_COLOR,
+    UP,
+)
 
 
 class Snake(GameObject):

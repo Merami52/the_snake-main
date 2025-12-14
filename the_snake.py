@@ -23,7 +23,7 @@ def handle_keys(game_object: GameObject) -> None:
 def main() -> None:
     """Запускает главный цикл игры."""
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Змейка")
+    pygame.display.set_caption('Змейка')
 
     snake = Snake()
     apple = Apple(snake.positions)
@@ -42,7 +42,7 @@ def main() -> None:
             snake._length += 1
             apple.randomize_position(snake.positions)
             highest_score = max(highest_score, snake._length)
-            pygame.display.set_caption(f"Змейка — рекорд {highest_score}")
+            pygame.display.set_caption(f'Змейка — рекорд {highest_score}')
 
         if snake.collision:
             snake.reset()
@@ -54,5 +54,5 @@ def main() -> None:
         pygame.display.update()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
